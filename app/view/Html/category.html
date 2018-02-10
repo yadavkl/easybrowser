@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset = "utf-8">
+<meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<script src = "../js/jquery-1.11.3.min.js"></script>
+<script src = "../js/jquery-1.11.3.min.js"></script>
+<script src= "../js/angular.min.js"></script> 
+<script src= "../js/category.js"></script> 
+<script src= "../js/bootstrap.min.js"></script> 
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/font-awesome.css" rel="stylesheet">
+<link href="../css/category.css" rel="stylesheet">
+<style>
+      .test {
+        color: red;
+      }
+      
+      .test1 {color:green;}
+    </style>
+ </head>
+ <body ng-app = "myApp">
+ 
+		
+   
+      
+     
+     <div id="category" class="container-fluid" ng-controller = "genericCtrl" >
+	
+		<div ng-show="webStore">
+			<fieldset class="responsive-fieldset" ng-controller = "featuredCtrl">
+             <legend>Featured</legend>
+			 <category-directive></category-directive>
+             </fieldset>
+			 
+			 <hr/>
+			 
+			 <fieldset class="responsive-fieldset" ng-controller = "categoriesCtrl">
+             <legend>Categories</legend>
+			<ul class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center" ng-repeat='val in result track by $index' style= "display:inline-block;border:1px solid blue;margin-bottom:0px">
+				<li style="padding-top:5px" ng-click="goCategory(val.category)"><a href="#"><img ng-src = "{{val.image}}" class="icon"></img></a></li>				
+				<li><strong>{{val.category}}</strong></li>
+			</ul>
+				
+             </fieldset>
+			 
+			 <hr/>
+			 
+			 <fieldset class="responsive-fieldset" ng-controller = "newCtrl">
+             <legend>New</legend>
+			 <category-directive></category-directive>
+             </fieldset>
+			 
+			 <hr/>
+			 <fieldset class="responsive-fieldset" ng-controller = "videoMusicCtrl">
+             <legend>Video & Music</legend>
+				<category-directive></category-directive>				
+             </fieldset>
+			 
+			 
+			 <hr/>
+			 <fieldset class="responsive-fieldset" ng-controller = "toolCtrl">
+             <legend>Tool</legend>
+				<category-directive></category-directive>
+             </fieldset>
+			 
+			 <hr/>			 
+			 <fieldset class="responsive-fieldset" ng-controller = "lifeStyleCtrl">
+             <legend>Life Style</legend>
+				<category-directive></category-directive>
+             </fieldset>
+			 
+		</div>
+		<div id="mainCategory" ng-show="!webStore" ng-controller = "mainCategoryCtrl">
+			
+			<main-directive></main-directive>
+		</div>
+
+      </div>
+     
+	 <div ng-controller="SettingsController">
+ 
+  
+  <span ng-class="checkValue1() ? 'test' : 'test1'">same as first but using function (working)</span><br>
+  current value: {{ obj.value1 }}<br><br>
+  
+  <a href ng-click="obj.value1 = 0">change value 1 to someothervalue</a><br>
+  <a href ng-click="obj.value1 = 1">change value 1 to somevalue</a>
+  
+</div>
+	 
+	 
+ </body>
+</html>
+ <hr/>
+			 <!--fieldset class="responsive-fieldset" ng-controller = "categoriesCtrl">
+             <legend>Categories</legend>
+			<ul class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat='val in result track by $index'>
+				
+				<ul class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style= "display:inline-block;border:1px solid red">
+				<li><a href="{{val.site}}"><img ng-src = "{{val.image}}" class="icon"></img></a></li>
+				</ul>
+				<ul class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style= "display:inline-block;border:1px solid red">
+				
+				<li class="title"><a class="news" href="{{val.site}}"> {{val.title}} </a> </li>
+				<li ng-class ="{colorStar:true == true}" style="display:inline-block;" ng-repeat = "x in [1,2,3,4,5] track by $index"><i class="fa fa-star"></i></li>
+				<li><a class="news" href="{{val.site}}"> {{val.detail}} </a> </li>
+				</ul>
+				<ul class="col-xs-2 col-sm-2 col-md-2 col-lg-2 plusTable" style= "border:1px solid green">
+					<li class="plusCell"><a href="#"><i class="fa fa-plus fa-2x"></i></a></li>
+				</ul>
+				</a>
+			</ul>
+
+				
+				<button type="button" ng-click="goToUrl()" class="btn btn-default col-xs-12 col-sm-12 col-md-12 col-lg-12 seeMore"> See More ></button>
+				
+				
+			
+
+             </fieldset-->

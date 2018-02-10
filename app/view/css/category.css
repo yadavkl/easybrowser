@@ -1,0 +1,151 @@
+/*custom css*/
+a , a:hover {
+	text-decoration:none;
+	/*color:black;	*/
+}
+
+fieldset {
+    border-top: 1px solid #DDD;
+    
+}
+
+.responsive-fieldset {display:table-cell; width: 100%}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom:1px;
+	/*width:7%;*/
+}
+
+.title{
+	font-weight:bold;
+}
+
+li {
+	text-overflow: ellipsis;
+	overflow:hidden;	
+	white-space:nowrap;
+	list-style:none;
+	
+}
+
+.verticalLine {
+    border-right: 1px solid #ccc;
+}
+
+.categoryGap{
+	margin-top:15px;
+}
+
+.colorStar{
+	color:orange
+	
+}
+
+.plusTable{
+
+	display:table;	
+
+}
+
+.seeMore {
+
+	color : #337ab7;
+	font-weight:bold;
+	
+}
+
+.plusCell{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+
+ul {padding:0px !important}
+
+.icon{}
+
+.fa-check { color:green;}
+.fa-plus { color:gray;}
+.iconImageHeight{
+		display: table;
+		//border:1px solid red;
+}
+
+.iconImagePosition{
+		display:table-cell;
+		vertical-align : middle;
+}
+
+	@media only screen and (max-width : 4200px) {
+		
+		a.news{font-size: 30px !important;}
+		ul.plusTable{height:110px !important;}
+		img.icon{width:110px !important;height:110px !important;}
+        
+    }
+
+/* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		
+		a.news{font-size: 25px !important;}
+		ul.plusTable{height:110px !important;}
+		img.icon{width:110px !important;height:110px !important;}
+    }
+	
+	/* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+		a.news{font-size: 20px !important;}
+		ul.plusTable{height:110px !important;}
+		img.icon{width:110px !important;height:110px !important;}
+    }
+	
+	/* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+		a.news{font-size: 13px !important;}
+		ul.plusTable{height:65px !important;}
+		img.icon{width:40px !important;height:40px !important;}
+		button{font-size:15px !important;}
+		ul.iconImageHeight{height:65px;}
+		li strong{font-size:11px;}
+    }
+	
+	/* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+		a.news{font-size: 13px !important;}
+		ul.plusTable{height:65px !important;}
+		img.icon{width:40px !important;height:40px !important;}
+		button{font-size:15px !important;}
+		ul.iconImageHeight{height:65px;}
+		li strong{font-size:11px;}
+		
+        
+		
+    }
+	
+	@media only screen and (max-width : 320px) {
+        a.news{font-size: 13px !important;}
+		ul.plusTable{height:65px !important;}
+		img.icon{width:30px !important;height:30px !important;}
+		button{font-size:13px !important;}
+		ul.iconImageHeight{height:65px;}
+		li strong{font-size:8px;}
+    }
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
